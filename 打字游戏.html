@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>打字游戏</title>
+    <style>
+        .box .life{
+            width:50px;
+            height:50px;
+            position:relative;
+            left:100px;
+            background-image: url('img/心.png');
+            background-size: cover;
+            animation: bb 1s linear infinite;
+        }
+        .box .liwu{
+            width:60px;
+            height:60px;
+            position:absolute;
+            top:10px;
+            left:560px;
+            background-image: url('img/礼物.png');
+            background-size: cover;
+            text-align: center;
+            line-height: 60px;
+        }
+        .box .guanqia{
+            width:70px;
+            height:70px;
+            background-image: url('img/1.png');
+            background-size: cover;
+            position:absolute;
+            top:0px;
+            left:900px;
+            z-index:100;
+        }
+        .box .guanqia .gq1{
+            position:absolute;
+            top:30px;
+            left:80px;
+            font-size: 24px;
+            color:saddlebrown;
+        }
+        .box .liwu .fs{
+            position:relative;
+            left:50px;
+            font-size: 24px;
+            color:deeppink;
+        }
+        .box .sm{
+            width:100px;
+            height:10px;
+            background:orangered;
+            border-radius: 5px;
+            border:2px solid red;
+            position: relative;
+            top:-30px;
+            left:160px;
+            z-index:100;
+        }
+        .box .di{
+            width:100px;
+            height:10px;
+            border-radius: 5px;
+            border:2px solid red;
+            position: relative;
+            top:-42px;
+            left:160px;
+        }
+        body{
+            background-image: url('img/糖果屋.jpg');
+            background-size: 100%;
+        }
+        .pic .nv{
+            width:150px;
+            height:250px;
+            background-image: url('img/女.png');
+            background-size: cover;
+            position:relative;
+            top:320px;
+            left:60px;
+        }
+        .pic .nan{
+            width:150px;
+            height:250px;
+            background-image: url('img/男.png');
+            background-size: cover;
+            position:absolute;
+            top:400px;
+            left:300px;
+            animation: aa 10s linear infinite;
+        }
+        @keyframes aa {
+            0%{
+                transform:translateX(-100px);
+            }
+            50%{
+                transform:translateX(800px)
+            }
+            100%{
+                transform:translateX(-100px);
+            }
+        }
+        @keyframes bb {
+            0%{
+                transform:scale(1.5);
+            }
+            50%{
+                ttransform:scale(2)
+            }
+            100%{
+                ttransform:scale(1.5);
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+    <div class="life"></div>
+    <div class="sm"></div>
+    <div class="di"></div>
+    <div class="liwu"> <span class="fs">0</span></div>
+    <div class="guanqia"><span class="gq1">第<span class="gqgq">1</span>关</span></div>
+</div>
+<div class="pic">
+    <div class="nv"></div>
+    <div class="nan"></div>
+</div>
+</body>
+</html>
+<script src="dollar.js"></script>
+<script src="打字游戏.js"></script>
+<script>
+    let game=new Game();
+    game.start();
+</script>
